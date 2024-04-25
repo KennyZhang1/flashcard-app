@@ -1,0 +1,91 @@
+<!-- Page Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Kenny Zhang">
+    <meta name="description" content="Flashcard App Project for CS 4750">
+
+    <title>Home</title>
+    
+    <!-- Include CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://kit.fontawesome.com/7a937c8eef.js" crossorigin="anonymous"></script>
+    <style>
+        .card {
+            height: 250px;
+            transition: transform 0.5s ease;
+        }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-12">
+        <h2 class="text-4xl font-semibold text-center py-4">Welcome to QuizIt!</h2>
+        <div class="grid grid-cols-3 gap-8 mt-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">Learn</h2>
+                    <p class="text-gray-700 text-center">Create flashcards to study your favorite subjects</p>
+                    <img src="static/deck.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">Practice</h2>
+                    <p class="text-gray-700 text-center">Create quizzes to test your knowledge and gain mastery</p>
+                    <img src="static/quiz.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">Master</h2>
+                    <p class="text-gray-700 text-center">Accumulate 100 mastery to master a deck</p>
+                    <img src="static/master-deck.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">Compete</h2>
+                    <p class="text-gray-700 text-center">Add your friends and compare quiz rating</p>
+                    <img src="static/trophy.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">All or Nothing</h2>
+                    <p class="text-gray-700 text-center">Only perfect quiz scores will earn deck mastery</p>
+                    <img src="static/perfect.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                <div class="p-4 card-content">
+                    <h2 class="text-2xl font-bold mb-2">Go Big</h2>
+                    <p class="text-gray-700 text-center">Complete longer quizzes to earn greater rewards</p>
+                    <img src="static/gobig.png" alt="Icon" class="w-16 h-16 mt-6">
+                </div>
+            </div>
+        </div>
+        <div class="index-btns flex justify-center mt-8">
+            <div class="grid grid-cols-2 gap-6">
+                <button id="login-fetcher" onclick="window.location.href='login.php'" 
+                    class="py-2 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Login</button>
+                <button id="create-account-fetcher" onclick="window.location.href='create-account.php'"
+                    class="py-2 px-6 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Create Account</button>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
