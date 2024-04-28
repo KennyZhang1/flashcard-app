@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `flashcard_app`
 --
+CREATE DATABASE flashcard_app;
 
 -- --------------------------------------------------------
 
