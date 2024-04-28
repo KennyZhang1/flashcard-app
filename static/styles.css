@@ -1,0 +1,426 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* nav bar styling */
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+/* Reset default list styles */
+ul {
+  position: relative;
+  width: 450px;
+  margin: 0px auto 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style each friend list item */
+.friend-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.fname {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.frating {
+  font-style: italic;
+  width: 50px;
+  text-align: right;
+}
+
+.fbadge {
+  width: 50px;
+  margin-left: 10px;
+  text-align: left;
+  color: gold;
+}
+
+/* Style each request */
+.requests-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f2f8fe;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inc-req-text {
+  flex: 1;
+}
+
+.inc-req-text p {
+  margin: 0;
+}
+
+.inc-req-msg {
+  font-style: italic;
+}
+
+
+.inc-req-accept,
+.inc-req-reject {
+  margin-left: 10px;
+}
+
+#f-accept-btn,
+#f-reject-btn {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#f-accept-btn:hover,
+#f-reject-btn:hover {
+  filter: brightness(90%);
+}
+
+/* style each deck list item */
+ul.deck-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #f2f8fe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+ul.deck-list li.deck-item-mastered {
+  background-color: #f5f2fe;
+}
+
+.deck-text {
+  flex: 1;
+}
+
+.deck-text p {
+  margin: 0;
+}
+
+.deck-desc {
+  font-style: italic;
+}
+
+.star-icon {
+  color: rgb(239, 203, 0);
+}
+
+.diamond-icon {
+  color: rgb(37, 23, 230);
+}
+
+.mastery-icon {
+  margin-left: 5px;
+}
+
+.deck-mastery {
+  margin-left: 10px;
+}
+
+.flashcard-icon {
+  margin-left: 5px;
+  color: rgb(0, 167, 131);
+}
+
+.study-deck,
+.edit-deck,
+.delete-deck {
+  margin-left: 10px;
+}
+
+#deck-study-btn,
+#deck-edit-btn,
+#deck-delete-btn {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#deck-study-btn:hover,
+#deck-edit-btn:hover,
+#deck-delete-btn:hover {
+  filter: brightness(90%);
+}
+
+/* style each card list item */
+.card-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #eaf2ff;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.card-list li.mastered-card {
+  background-color: #f2eaff;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-text p {
+  margin: 0;
+}
+
+.edit-card,
+.delete-card {
+  margin-left: 10px;
+}
+
+#card-edit-btn,
+#card-delete-btn {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#card-edit-btn:hover,
+#card-delete-btn:hover {
+  filter: brightness(90%);
+}
+
+.add-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-add-card-div {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+/* Styling for study interface */
+.card-scroll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-item {
+  display: inline-block;
+}
+
+.scroll-btn {
+  width: 48px;
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+}
+
+.center-card-container {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev-card-btn:hover,
+#next-card-btn:hover,
+#flip-btn:hover {
+  color: rgb(0, 167, 131);
+}
+
+.title-item {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-deck-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.study-deck-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling for quiz display */
+ul.complete-quiz-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: rgb(232, 250, 243);;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-text {
+  flex: 1;
+}
+
+.quiz-text p {
+  margin: 0;
+}
+
+.quiz-desc {
+  font-style: italic;
+}
+
+.score-icon {
+  margin-left: 5px;
+}
+
+.check-icon {
+  color: rgb(0, 167, 131);
+}
+
+.x-icon {
+  color: rgb(185, 4, 4);
+}
+
+.ribbon-icon {
+  color: rgb(12, 53, 202);
+}
+
+.review-cquiz,
+.do-equiz {
+  margin-left: 20px;
+}
+
+.delete-cquiz,
+.delete-equiz {
+  margin-left: 10px;
+}
+
+#review-quiz-btn,
+#delete-cquiz-btn,
+#do-quiz-btn,
+#delete-equiz-btn {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#review-quiz-btn:hover,
+#delete-cquiz-btn:hover,
+#do-quiz-btn:hover,
+#delete-equiz-btn:hover {
+  filter: brightness(90%);
+}
+
+ul.empty-quiz-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: rgb(250, 232, 232);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-quiz-opts {
+  display: inline-block;
+}
+
+.review-quiz-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling for question review display */
+ul.question-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: rgb(232, 250, 243);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+  flex: 1;
+}
+
+.question-text p {
+  margin: 0;
+}
+
+.question-answer {
+  font-style: italic;
+}
+
+ul.question-list li.q-wrong {
+  background-color: rgb(250, 232, 232);
+}
+
+
+
