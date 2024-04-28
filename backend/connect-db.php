@@ -31,7 +31,7 @@
 
 /** S24, PHP (on GCP, local XAMPP, or CS server) connect to MySQL (on local XAMPP) **/
 $username = 'app';
-$password = 'dfnNGVBj5r7i9_fL';
+$password = '';
 $host = 'localhost';
 $dbname = 'flashcard_app';    
 $dsn = "mysql:host=$host;dbname=$dbname";  
